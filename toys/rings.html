@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Discover Rings</title>
+	<script type="text/javascript" src="../jquery-3.4.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<table>
+		<tr>
+			<td rowspan="5" width="800">
+				<img src="images/VTech-StackDiscoverRings-Small-350.jpg" id="item" height/width="450" style="float: left;">
+			</td>
+			<td class="para"><b>Item Name : <input type="text" class="para2" id="iname"/></b></td>
+		</tr>
+		<tr>
+			<td class="para"><b>Brand : <input type="text" class="para2" id="ibrand"/></b></td>
+		</tr>
+		<tr>
+			<td class="para"><b>Size : <input type="text" class="para2" id="isize"></b></td>
+		</tr>
+		<tr>
+			<td class="para"><b>Price : <input type="text" class="para2" id="iprice"></b></td>
+		</tr>
+		<tr>
+			<td><button class="button">Buy It</button></td>
+		</tr>
+	</table>
+	<script>
+		$(document).ready(
+			function(){
+				var a = $("img").attr("src");
+				var b = a.split("-");
+				var c = b[0];
+				var d = c.split("/");
+				var e = b[3];
+				var f = e.split(".");
+				var name = b[1];
+				var brand = d[1];
+				var size = b[2];
+				var price = f[0];
+				$("#iname").val(name);
+				$("#ibrand").val(brand);
+				$("#isize").val(size);
+				$("#iprice").val("Rs "+price+".00");
+			}
+		);
+	</script>
+</body>
+</html>
